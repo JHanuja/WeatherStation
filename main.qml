@@ -48,15 +48,19 @@ Window {
 
 
 
-                            if (mainWindow.screenWidth > 0 && mainWindow.screenWidth <= 479){
+                            if (mainWindow.screenWidth > 0 && mainWindow.screenWidth <= 695){
                                 return mainWindow.screenWidth - 60
                             }
 
-                            if (mainWindow.screenWidth > 479 && mainWindow.screenWidth <= 991){
+                            if (mainWindow.screenWidth > 695 && mainWindow.screenWidth <= 991){
                                 return mainWindow.screenWidth / 2 - 30
                             }
 
-                            if (mainWindow.screenWidth > 991){
+                            if (mainWindow.screenWidth > 991 && mainWindow.screenWidth < 1250){
+                                return mainWindow.screenWidth / 3 - 20
+                            }
+
+                            if (mainWindow.screenWidth > 1250){
                                 return mainWindow.screenWidth / 4 - 15
                             }
 
@@ -67,15 +71,17 @@ Window {
                         property int elementHeight: {
 
 
-                                if (mainWindow.screenHeight > 0 && mainWindow.screenHeight <= 600){
+
+
+                                if (mainWindow.screenHeight > 0 && mainWindow.screenHeight <= 400){
                                     return mainWindow.screenHeight - 30
                                 }
 
-                                if (mainWindow.screenHeight > 600 && mainWindow.screenHeight <= 900){
-                                    return mainWindow.screenHeight/2 - 30
-                                }
+//                                if (mainWindow.screenHeight > 400 && mainWindow.screenHeight <= 900){
+//                                    return mainWindow.screenHeight/2 - 30
+//                                }
 
-                                if (mainWindow.screenHeight > 900){
+                                if (mainWindow.screenHeight > 400){
                                     return mainWindow.screenHeight / 3 - 20
                                 }
                        }
@@ -85,7 +91,7 @@ Window {
 
 
                         columns: Math.max(Math.floor(mainWindow.screenWidth / elementWidth), 1)
-                        rows: Math.max(Math.ceil(children.length / columns), 1)
+                        rows: Math.max(Math.floor(mainWindow.screenHeight / elementHeight), 1)//Math.max(Math.ceil(children.length / columns), 1)
 
 
 
