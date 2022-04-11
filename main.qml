@@ -101,11 +101,10 @@ Window {
                                 id: graphic1
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic1{
-                                    degrees:30
+                                    degrees:25
 
                                 }
                             }
