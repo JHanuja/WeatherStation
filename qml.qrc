@@ -4,5 +4,6 @@
         <file>Graphic1.qml</file>
         <file>Graphic2.qml</file>
         <file>Graphic3.qml</file>
+        <file>ArcItem.qml</file>
     </qresource>
 </RCC>

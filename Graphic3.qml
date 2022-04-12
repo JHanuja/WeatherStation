@@ -1,9 +1,10 @@
 import QtQuick 2.0
-import QtQuick.Studio.Components 1.0
 
 Item {
     id: root
-    property int degrees
+
+    property int humidity;
+
     anchors.fill: parent
 
     Rectangle {
@@ -38,9 +39,9 @@ Item {
                 Text {
                     id: text2
                     color: "#00ff44"
-                    text: qsTr("70%")
+                    text: qsTr(root.humidity + "%")
                     anchors.verticalCenter: parent.verticalCenter
-                    font.pixelSize: rectangle3.width * 0.3
+                    font.pixelSize: rectangle3.width * 0.25
                     font.bold: true
                     anchors.horizontalCenter: parent.horizontalCenter
                 }
@@ -60,7 +61,7 @@ Item {
                 round: true
                 capStyle: 0
                 strokeStyle: 0
-                end: 100
+                end: 360/100 * humidity
                 begin: 0
                 strokeWidth: 1
                 rotation: 0
