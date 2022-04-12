@@ -104,7 +104,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic1{
-                                    degrees:25
+                                    degrees:30
 
                                 }
                             }
