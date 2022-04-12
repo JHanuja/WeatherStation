@@ -113,7 +113,6 @@ Window {
                                 id: graphic2
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic2{
@@ -124,12 +123,11 @@ Window {
                             Rectangle {
                                 id: graphic3
                                 Layout.preferredWidth: gridlayout.elementWidth
-                                Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
+                                Layout.preferredHeight: gridlayout.elementHeight    
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic3{
-
+                                    humidity: 50
 
                                 }
                             }
