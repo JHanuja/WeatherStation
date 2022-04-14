@@ -3,7 +3,7 @@ import QtQuick 2.0
 Item {
     id: root
 
-    property int humidity;
+    property int soilHumidity;
 
     anchors.fill: parent
 
@@ -51,7 +51,7 @@ Item {
                     Text {
                         id: text2
                         color: "#00ff44"
-                        text: qsTr(root.humidity + "%")
+                        text: qsTr(root.soilHumidity + "%")
                         anchors.verticalCenter: parent.verticalCenter
                         font.pixelSize: rectangle3.width * 0.25
                         font.bold: true
@@ -75,7 +75,7 @@ Item {
                     round: true
                     capStyle: 0
                     strokeStyle: 0
-                    end: 360/100 * humidity
+                    end: 360/100 * soilHumidity
                     begin: 0
                     strokeWidth: 1
                     rotation: 0

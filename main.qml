@@ -116,7 +116,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic2{
-
+                                    humidity: 50
                                 }
                             }
 
@@ -127,7 +127,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic3{
-                                    humidity: 50
+                                    soilHumidity: 50
 
                                 }
                             }
@@ -137,72 +137,100 @@ Window {
                                 id: graphic4
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic4{
+                                    airPressure: 50
+                                }
                             }
+
 
                             Rectangle {
                                 id: graphic5
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic5{
+
+                                }
                             }
 
                             Rectangle {
                                 id: graphic6
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic6{
+
+                                }
                             }
 
                             Rectangle {
                                 id: graphic7
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic7{
+
+                                }
                             }
 
                             Rectangle {
                                 id: graphic8
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic8{
+
+                                }
                             }
 
                             Rectangle {
                                 id: graphic9
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic9{
+
+                                }
                             }
 
                             Rectangle {
                                 id: graphic10
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic10{
+
+                                }
                             }
 
                             Rectangle {
                                 id: graphic11
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic11{
+
+                                }
                             }
 
                             Rectangle {
                                 id: graphic12
                                 Layout.preferredWidth: gridlayout.elementWidth
                                 Layout.preferredHeight: gridlayout.elementHeight
-                                border.color: "black"
                                 Layout.alignment :  Qt.AlignCenter
+
+                                Graphic12{
+
+                                }
                             }
 
 
