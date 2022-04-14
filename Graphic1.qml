@@ -13,38 +13,32 @@ Item {
         anchors.fill: parent
 
         color: "#7a706f"
-        radius: 35
+
 
         Rectangle{
             id: rectangle1
             anchors.centerIn: parent
             width:parent.width
             height:parent.height
-            color: "#7a706f"
-            radius: 30
-            border.width: 3
+            color: "#424242"
+            radius: 7
+
 
 
             Rectangle {
-                y: 4
-                anchors.horizontalCenter: parent.horizontalCenter
+                y: parent.height * 0.05
+                x: parent.width * 0.05
                 id: rectangle
                 width: parent.width * 0.5
                 height: parent.height*0.2
-                opacity: 1.0
-
-                color: "#8e9490"
-                border.width: 1
-                anchors.horizontalCenterOffset: 10
-
+                color: "#424242"
                 Text {
                     id: text1
                     color: "#00ff44"
                     text: qsTr("Temperatur")
-                    anchors.verticalCenter: parent.verticalCenter
                     font.pixelSize: rectangle1.width * 0.05
                     font.bold: true
-                    anchors.horizontalCenter: parent.horizontalCenter
+
                 }
             }
 
@@ -55,13 +49,13 @@ Item {
                 x: 10
                 width: parent.width - 20
                 height: parent.height * 0.8 - 30
-                color:"#7a706f"
+                color: "#424242"
 
                 Rectangle {
                     id: rectangle3
                     width: parent.width * 0.5
                     height: parent.height
-                    color: "#7a706f"
+                    color: "#424242"
 
                     Rectangle {
                         id: rectangle5
@@ -296,7 +290,8 @@ Item {
                     x: parent.width * 0.5
                     width: parent.width * 0.5
                     height: parent.height
-                    color: "#7a706f"
+                    color: "#424242"
+
 
                     Text {
                         id: text10

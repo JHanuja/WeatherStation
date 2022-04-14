@@ -115,8 +115,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic2{
-                                    humidity: 50
+                                Graphic7{
+
                                 }
                             }
 
@@ -126,9 +126,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight    
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic3{
-                                    soilHumidity: 50
-
+                                Graphic2{
+                                    humidity: 50
                                 }
                             }
 
@@ -139,8 +138,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic4{
-                                    airPressure: 50
+                                Graphic8{
+
                                 }
                             }
 
@@ -162,7 +161,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic6{
+                                Graphic10{
 
                                 }
                             }
@@ -173,7 +172,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic7{
+                                Graphic4{
 
                                 }
                             }
@@ -184,7 +183,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic8{
+                                Graphic11{
 
                                 }
                             }
@@ -195,7 +194,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic9{
+                                Graphic3{
+                                    soilHumidity: 20
 
                                 }
                             }
@@ -206,7 +206,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic10{
+                                Graphic9{
 
                                 }
                             }
@@ -217,7 +217,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic11{
+                                Graphic6{
 
                                 }
                             }
