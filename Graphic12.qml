@@ -1,4 +1,6 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.15
+
 
 Item {
     id: root
@@ -63,6 +65,14 @@ Item {
                     width: parent.width * 0.5
                     height: parent.height
                     color: "#424242"
+
+                   Button{
+                       width: parent.width
+                       height: parent.width
+                       onClicked: {
+                           wsData.fetchData();
+                       }
+                   }
 
                 }
             }

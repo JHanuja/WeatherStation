@@ -21,6 +21,17 @@ Window {
     onWidthChanged: screenWidth = width
     onHeightChanged: screenHeight = height
 
+    property int degrees;
+
+    Connections{
+        target:wsData
+        function onFetchedData(data){
+            var json = JSON.parse(data);
+            degrees = json["temperature"];
+
+        }
+    }
+
 
             Page{
 
@@ -104,7 +115,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic1{
-                                    degrees:30
+                                    degrees:mainWindow.degrees
 
                                 }
                             }
