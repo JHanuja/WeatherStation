@@ -22,12 +22,18 @@ Window {
     onHeightChanged: screenHeight = height
 
     property int degrees;
+    property int humidity;
+    property var daytime;
 
     Connections{
         target:wsData
         function onFetchedData(data){
             var json = JSON.parse(data);
             degrees = json["temperature"];
+            humidity = json["humidity"];
+            daytime = json["daytime"];
+
+            console.log(daytime);
 
         }
     }
@@ -138,7 +144,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic2{
-                                    humidity: 50
+                                    humidity: mainWindow.humidity
                                 }
                             }
 
@@ -240,7 +246,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic12{
-
+                                    daytime:mainWindow.daytime
                                 }
                             }
 

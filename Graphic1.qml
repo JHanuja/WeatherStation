@@ -12,7 +12,6 @@ Item {
     Rectangle {
         anchors.fill: parent
 
-        color: "#7a706f"
 
 
         Rectangle{

@@ -1,14 +1,13 @@
 #pragma once
 #include <QObject>
-#include "weatherdata.h"
 #include <QVariant>
 #include "QNetworkReply"
+#include <iostream>
 
 class WeatherDataService : public QObject
 {
     Q_OBJECT
 private:
-    WeatherData data;
 
 public:
     explicit WeatherDataService(QObject *parent = nullptr);
@@ -19,7 +18,7 @@ signals:
     void fetchedData(QVariant data);
 
 public slots:
-    void fetchData();
+    void fetchData(QString ip);
     void onfinish(QNetworkReply *rep);
 
 };

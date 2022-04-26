@@ -8,6 +8,8 @@ Item {
 
     anchors.fill: parent
 
+    property var daytime;
+
 
 
 
@@ -49,30 +51,70 @@ Item {
                 height: parent.height * 0.8 - 30
                 color: "#424242"
 
+
+
                 Rectangle {
-                    id: rectangle3
-                    width: parent.width * 0.5
+                    id: rectangle4 
+                    width: parent.width
                     height: parent.height
                     color: "#424242"
 
+                    Rectangle{
+                        id:rectangle7
+                        width:parent.width
+                        height:parent.height * 0.15
+
+                        y: parent.height * 0.2
+                        color: "#424242"
+
+                        Text{
+                            anchors.centerIn: parent
+                            color: '#00ff44'
+                            text: "Stand Daten: " + daytime
+                        }
+
+                    }
+
+                    Rectangle{
+                        id:rectangle10
+                        width:parent.width * 0.4
+                        height:parent.height * 0.15
+                        x: parent.width * 0.3
+                        y: parent.height * 0.4
+                        color: "white"
+
+                        TextInput{
+                            id: ipadress
+                            anchors.centerIn: parent
+                            text: "3.16.78.33:5000"
+                        }
+
+                    }
+
+                    Rectangle{
+                        id:rectangle5
+                        width:parent.width * 0.4
+                        height:parent.height * 0.15
+                        x: parent.width * 0.3
+                        y: parent.height * 0.6
+                        color: "#00ff44"
+
+                        Button{
+
+                            text: "Aktualisieren"
+                            palette {
+                                button: "#00ff44"
+                            }
+
+                            anchors.fill: parent
+                            onClicked: {
+                                wsData.fetchData(ipadress.text);
+                            }
+                        }
+
+                    }
 
 
-                }
-
-                Rectangle {
-                    id: rectangle4
-                    x: parent.width * 0.5
-                    width: parent.width * 0.5
-                    height: parent.height
-                    color: "#424242"
-
-                   Button{
-                       width: parent.width
-                       height: parent.width
-                       onClicked: {
-                           wsData.fetchData();
-                       }
-                   }
 
                 }
             }

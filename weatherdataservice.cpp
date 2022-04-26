@@ -6,20 +6,24 @@
 #include <QNetworkRequest>
 #include <QUrl>
 #include <QNetworkReply>
+#include <iostream>
+
 
 WeatherDataService::WeatherDataService(QObject *parent)
     : QObject{parent}
 {
-
+    fetchData("3.16.78.33:5000");
 }
 
-void WeatherDataService::fetchData(){
+void WeatherDataService::fetchData(QString ip){
 
     QNetworkAccessManager * mgr = new QNetworkAccessManager(this);
     connect(mgr,SIGNAL(finished(QNetworkReply*)),this,SLOT(onfinish(QNetworkReply*)));
     connect(mgr,SIGNAL(finished(QNetworkReply*)),mgr,SLOT(deleteLater()));
+    QString s = "http://"+ ip +"/dht";
+    QUrl url{s};
 
-    mgr->get(QNetworkRequest(QUrl("http://3.16.78.33:5000/dht")));
+    mgr->get(QNetworkRequest(url));
 
 
 
