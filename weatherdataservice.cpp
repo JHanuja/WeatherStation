@@ -12,7 +12,7 @@
 WeatherDataService::WeatherDataService(QObject *parent)
     : QObject{parent}
 {
-    fetchData("3.16.78.33:5000");
+    fetchData("3.145.77.217:5000");
 }
 
 void WeatherDataService::fetchData(QString ip){

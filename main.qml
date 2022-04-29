@@ -133,6 +133,9 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic7{
+                                    mindate: new Date('2022-04-29');
+                                    maxdate: new Date('2022-05-05');
+                                    values: [-4, 0,4,4.5,2,1,3.3];
 
                                 }
                             }

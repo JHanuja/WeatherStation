@@ -6,6 +6,77 @@ Item {
 
     anchors.fill: parent
 
+    property var mindate;
+    property var maxdate;
+    property var values;
+
+    function temperatureRange(x){
+        var tmp;
+        if (x >= -50 && x < -45){
+            tmp= -50;
+        }
+        if (x >= -45 && x < -40){
+            tmp= -45;
+        }
+        if (x >= -40 && x < -35){
+            tmp= -40;
+        }
+        if (x >= -35 && x < -30){
+            tmp= -35;
+        }
+        if (x >= -30 && x < -25){
+            tmp= -30;
+        }
+        if (x >= -25 && x < -20){
+            tmp= -25;
+        }
+        if (x >= -20 && x < -15){
+            tmp= -20;
+        }
+        if (x >= -15 && x < -10){
+            tmp= -15;
+        }
+        if (x >= -10 && x < -5){
+            tmp= -10;
+        }
+        if (x >= -5 && x < 0){
+            tmp= -5;
+        }
+        if (x >=0  && x < 5){
+            tmp= 5;
+        }
+        if (x >= 5 && x < 10){
+            tmp= 10;
+        }
+        if (x >= 10 && x < 15){
+            tmp= 15;
+        }
+        if (x >=15 && x < 20){
+            tmp= 20;
+        }
+        if (x >= 20 && x < 25){
+            tmp= 25;
+        }
+        if (x >= 25 && x < 30){
+            tmp= 30;
+        }
+        if ((x >=30) && (x < 35)){
+            tmp= 35;
+        }
+        if (x >= 35 && x < 40){
+            tmp= 40;
+        }
+        if (x >= 40 && x < 45){
+            tmp= 45;
+        }
+        if (x >= 45 && x < 50){
+            tmp= 50;
+        }
+
+        return tmp;
+
+    }
+
 
 
 
@@ -47,23 +118,11 @@ Item {
                 height: parent.height * 0.8 - 30
                 color: "#424242"
 
-                Rectangle {
-                    id: rectangle3
-                    width: parent.width * 0.5
-                    height: parent.height
-                    color: "#424242"
-
-
-
-                }
-
-                Rectangle {
-                    id: rectangle4
-                    x: parent.width * 0.5
-                    width: parent.width * 0.5
-                    height: parent.height
-                    color: "#424242"
-
+                BasicChart{
+                    mapFunction: temperatureRange
+                    minDate: root.mindate
+                    maxDate: root.maxdate
+                    values: root.values
                 }
             }
         }

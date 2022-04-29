@@ -14,5 +14,6 @@
         <file>Graphic10.qml</file>
         <file>Graphic11.qml</file>
         <file>Graphic12.qml</file>
+        <file>BasicChart.qml</file>
     </qresource>
 </RCC>
