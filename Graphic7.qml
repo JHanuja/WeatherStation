@@ -110,6 +110,49 @@ Item {
             }
 
             Rectangle {
+                y: parent.height * 0.05
+                x: parent.width * 0.7
+                id: color1
+                width: parent.width * 0.02
+                height: parent.width*0.02
+                color: "#00ff44"
+
+            }
+
+            Text {
+                y: parent.height * 0.05
+                x: parent.width * 0.73
+                id: color1Text
+                color: "#ffffff"
+                text: qsTr("max")
+                font.pixelSize: rectangle1.width * 0.02
+                font.bold: false
+
+            }
+
+            Rectangle {
+                y: parent.height * 0.05
+                x: parent.width * 0.8
+                id: color2
+                width: parent.width * 0.02
+                height: parent.width*0.02
+                color: "#00e5ff"
+
+            }
+
+            Text {
+                y: parent.height * 0.05
+                x: parent.width * 0.83
+                id: color2Text
+                color: "#ffffff"
+                text: qsTr("schnitt")
+                font.pixelSize: rectangle1.width * 0.02
+                font.bold: false
+
+            }
+
+
+            Rectangle {
 
                 id: rectangle2
                 y: parent.height * 0.2 + 10

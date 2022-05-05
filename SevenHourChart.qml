@@ -13,7 +13,7 @@ import QtCharts 2.15
         property var mapFunction;
 
 
-        property var allValues: values[0].concat(values[1]);
+        //property var allValues: values[0].concat(values[1]);
 
 
         id: chart
@@ -25,7 +25,7 @@ import QtCharts 2.15
                id: xAxis
                min: minDate;
                max: maxDate;
-               format: "d.M"
+               format: "HH:MM"
                tickCount: 7
 
 
@@ -35,29 +35,41 @@ import QtCharts 2.15
 
 
                 id: yAxis
-                min: mapFunction(Math.min(...allValues))
-                max: mapFunction(Math.max(...allValues))
+                min: mapFunction(Math.min(...values))
+                max: mapFunction(Math.max(...values))
             }
         ]
         Component.onCompleted: {
 
-                for (let n = 0; n<values.length;n++){
-                    let series = chart.createSeries(ChartView.SeriesTypeLine, n, xAxis, yAxis);
-                    series.pointsVisible = true;
-                    series.color = (n === 0) ?"#00ff44" : "#00e5ff"
-                    let pointsCount = 7;
+                    let series = chart.createSeries(ChartView.SeriesTypeLine, "line", xAxis, yAxis);
+                    series.pointsVisible = false;
+                    series.color = "#00ff44"
+                    let pointsCount = 144;
                     let date =new Date(JSON.parse(JSON.stringify(minDate)));
 
 
                     console.log(minDate);
 
+                    var tmpArray = [];
+                    for (let t = 0; t < 144;t++){
+                        tmpArray.push(950.0+t)
+                    }
+
+                    console.log(tmpArray);
+
                     for(let i = 0;i < pointsCount;i++)
                     {
-                        let y = chart.values[n][i];
-                        series.append(date, y);
-                        date.setDate(date.getDate() + 1);
 
-                        console.log(chart.values[n][i]);
+
+
+                        //console.log(tmpArray[i]);
+
+
+                        let y = tmpArray[i];
+                        series.append(date, y);
+                        console.log(tmpArray[i]);
+                        date.setTime(date.getTime()+(5*60*1000));
+
 
                     }
                 }
@@ -66,6 +78,6 @@ import QtCharts 2.15
 
 
 
-        }
+
     }
 

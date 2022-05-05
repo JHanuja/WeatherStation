@@ -42,7 +42,7 @@ Item {
                     y: 144
                     width: parent.width * 0.30
                     height: parent.width * 0.3
-                    color:"#1c1c1c"
+                    color:"#2d2f38"
                     radius: 100
                     anchors.verticalCenter: parent.verticalCenter
                     anchors.verticalCenterOffset: 0

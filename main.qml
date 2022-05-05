@@ -135,7 +135,7 @@ Window {
                                 Graphic7{
                                     mindate: new Date('2022-04-29');
                                     maxdate: new Date('2022-05-05');
-                                    values: [-4, 0,4,4.5,2,1,3.3];
+                                    values: [[-4, 0,4,4.5,2,1,3.3],[-10, 2,6,7.0,8.2,9.0,3.0]];
 
                                 }
                             }
@@ -193,7 +193,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic4{
-
+                                    value : 1000
                                 }
                             }
 
@@ -204,6 +204,10 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic11{
+                                    mindate: new Date('2022-04-29T15:00:00');
+                                    maxdate: new Date('2022-04-29T24:00:00');
+                                    values: [1000, 800];
+
 
                                 }
                             }

@@ -15,5 +15,6 @@
         <file>Graphic11.qml</file>
         <file>Graphic12.qml</file>
         <file>BasicChart.qml</file>
+        <file>SevenHourChart.qml</file>
     </qresource>
 </RCC>
