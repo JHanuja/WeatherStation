@@ -12,7 +12,7 @@ Window {
     minimumWidth: 0
 
     visible: true
-    title: qsTr("Hello World")
+    title: qsTr("Weatherstation")
     color: "black"
 
     property int screenWidth: 479
@@ -46,24 +46,16 @@ Window {
             height: screenHeight
             padding: 30
 
-
-
             ScrollView {
                 id: scroller
                 anchors.fill: parent
 
-
                 GridLayout{
-
 
                         id: gridlayout
                         anchors.fill: parent
 
-
                         property int elementWidth: {
-
-
-
 
                             if (mainWindow.screenWidth > 0 && mainWindow.screenWidth <= 695){
                                 return mainWindow.screenWidth - 60
@@ -80,15 +72,9 @@ Window {
                             if (mainWindow.screenWidth > 1250){
                                 return mainWindow.screenWidth / 4 - 15
                             }
-
-
-
                         }
 
                         property int elementHeight: {
-
-
-
 
                                 if (mainWindow.screenHeight > 0 && mainWindow.screenHeight <= 400){
                                     return mainWindow.screenHeight - 30
@@ -103,16 +89,8 @@ Window {
                                 }
                        }
 
-
-
-
-
                         columns: Math.max(Math.floor(mainWindow.screenWidth / elementWidth), 1)
                         rows: Math.max(Math.floor(mainWindow.screenHeight / elementHeight), 1)//Math.max(Math.ceil(children.length / columns), 1)
-
-
-
-
 
                             Rectangle {
                                 id: graphic1
@@ -135,7 +113,7 @@ Window {
                                 Graphic7{
                                     mindate: new Date('2022-04-29');
                                     maxdate: new Date('2022-05-05');
-                                    values: [[-4, 0,4,4.5,2,1,3.3],[-10, 2,6,7.0,8.2,9.0,3.0]];
+                                    values: [[-4, 0,4,4.5,2,1,3.3],[-10, 2,6,7.0,8.2,9.0,3.0],[-5,3,5,6,5.8,9,-3]];
 
                                 }
                             }
@@ -151,7 +129,6 @@ Window {
                                 }
                             }
 
-
                             Rectangle {
                                 id: graphic4
                                 Layout.preferredWidth: gridlayout.elementWidth
@@ -159,10 +136,11 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic8{
-
+                                    mindate: new Date('2022-04-29');
+                                    maxdate: new Date('2022-05-05');
+                                    values: [[50,50,55,67,80,56,34],[],[]];
                                 }
                             }
-
 
                             Rectangle {
                                 id: graphic5
@@ -182,7 +160,9 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic10{
-
+                                    mindate: new Date('2022-04-29T15:00:00');
+                                    maxdate: new Date('2022-04-29T24:00:00');
+                                    values: [1200,1350,700,800,900,1500,1750];
                                 }
                             }
 
@@ -207,8 +187,6 @@ Window {
                                     mindate: new Date('2022-04-29T15:00:00');
                                     maxdate: new Date('2022-04-29T24:00:00');
                                     values: [1000, 800];
-
-
                                 }
                             }
 
@@ -220,7 +198,6 @@ Window {
 
                                 Graphic3{
                                     soilHumidity: 20
-
                                 }
                             }
 
@@ -231,7 +208,9 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic9{
-
+                                    mindate: new Date('2022-04-29T15:00:00');
+                                    maxdate: new Date('2022-04-29T24:00:00');
+                                    values: [[1200,750,600,500,550,450,500],[],[]];
                                 }
                             }
 
@@ -256,11 +235,7 @@ Window {
                                     daytime:mainWindow.daytime
                                 }
                             }
-
-
                         }
-
-
             }
         }
 

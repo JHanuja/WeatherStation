@@ -84,7 +84,6 @@ Item {
                     fillColor: "#00ff44"
                 }
             }
-
         }
 
         Rectangle {
@@ -100,7 +99,6 @@ Item {
                 text: qsTr("Bodenfeuchte")
                 font.pixelSize: rectangle1.width * 0.05
                 font.bold: true
-
             }
         }
     }

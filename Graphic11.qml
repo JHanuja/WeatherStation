@@ -3,7 +3,6 @@ import QtQuick 2.0
 Item {
     id: root
 
-
     anchors.fill: parent
 
     property var mindate;
@@ -50,10 +49,6 @@ Item {
 
     }
 
-
-
-
-
     Rectangle{
         id: rectangle1
         anchors.centerIn: parent
@@ -61,8 +56,6 @@ Item {
         height:parent.height
         color: "#424242"
         radius: 7
-
-
 
         Rectangle {
             y: parent.height * 0.05
@@ -77,7 +70,6 @@ Item {
                 text: qsTr("Luftdruck Verlauf")
                 font.pixelSize: rectangle1.width * 0.05
                 font.bold: true
-
             }
         }
 
@@ -102,9 +94,6 @@ Item {
 
         }
 
-
-
-
         Rectangle {
 
             id: rectangle2
@@ -122,7 +111,6 @@ Item {
             }
         }
     }
-
 }
 
 

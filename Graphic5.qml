@@ -3,13 +3,7 @@ import QtQuick 2.0
 Item {
     id: root
 
-
     anchors.fill: parent
-
-
-
-
-
 
         Rectangle{
             id: rectangle1
@@ -18,8 +12,6 @@ Item {
             height:parent.height
             color: "#424242"
             radius: 7
-
-
 
             Rectangle {
                 y: parent.height * 0.05
@@ -47,27 +39,8 @@ Item {
                 height: parent.height * 0.8 - 30
                 color: "#424242"
 
-                Rectangle {
-                    id: rectangle3
-                    width: parent.width * 0.5
-                    height: parent.height
-                    color: "#424242"
-
-
-
-                }
-
-                Rectangle {
-                    id: rectangle4
-                    x: parent.width * 0.5
-                    width: parent.width * 0.5
-                    height: parent.height
-                    color: "#424242"
-
                 }
             }
         }
-
-}
 
 

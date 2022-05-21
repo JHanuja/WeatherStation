@@ -84,7 +84,6 @@ Item {
                     fillColor: "#00ff44"
                 }
             }
-
         }
 
         Rectangle {

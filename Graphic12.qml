@@ -1,19 +1,12 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.15
 
-
 Item {
     id: root
-
 
     anchors.fill: parent
 
     property var daytime;
-
-
-
-
-
 
         Rectangle{
             id: rectangle1
@@ -22,8 +15,6 @@ Item {
             height:parent.height
             color: "#424242"
             radius: 7
-
-
 
             Rectangle {
                 y: parent.height * 0.05
@@ -51,8 +42,6 @@ Item {
                 height: parent.height * 0.8 - 30
                 color: "#424242"
 
-
-
                 Rectangle {
                     id: rectangle4 
                     width: parent.width
@@ -72,7 +61,6 @@ Item {
                             color: '#00ff44'
                             text: "Stand Daten: " + daytime
                         }
-
                     }
 
                     Rectangle{
@@ -88,7 +76,6 @@ Item {
                             anchors.centerIn: parent
                             text: "3.16.78.33:5000"
                         }
-
                     }
 
                     Rectangle{
@@ -111,15 +98,10 @@ Item {
                                 wsData.fetchData(ipadress.text);
                             }
                         }
-
                     }
-
-
-
                 }
             }
         }
-
 }
 
 

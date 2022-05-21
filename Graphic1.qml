@@ -86,7 +86,6 @@ Item {
                                 }
 
                         }
-
                     }
 
 
@@ -117,7 +116,6 @@ Item {
                                 x: -15
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
 
                         Rectangle {
@@ -137,7 +135,6 @@ Item {
                                 x: -15
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
 
                         Rectangle {
@@ -157,7 +154,6 @@ Item {
                                 x: -15
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
 
                         Rectangle {
@@ -177,7 +173,6 @@ Item {
                                 x: -15
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
 
                         Rectangle {
@@ -197,7 +192,6 @@ Item {
                                 x: -15
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
 
                         Rectangle {
@@ -217,7 +211,6 @@ Item {
                                 x: -15
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
 
                         Rectangle {
@@ -237,7 +230,6 @@ Item {
                                 x: -20
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
 
                         Rectangle {
@@ -249,7 +241,6 @@ Item {
                             opacity: 1
                             color: "#ffffff"
                             radius: 0
-
 
                             Text{
                                 text: "-20"
@@ -277,11 +268,8 @@ Item {
                                 x: -20
                                 anchors.verticalCenter: parent.verticalCenter
                             }
-
                         }
-
                     }
-
                 }
 
                 Rectangle {

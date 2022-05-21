@@ -13,7 +13,7 @@ import QtCharts 2.15
         property var mapFunction;
 
 
-        property var allValues: values[0].concat(values[1]);
+        property var allValues: values[0].concat(values[1]).concat(values[2]);
 
 
         id: chart
@@ -44,7 +44,7 @@ import QtCharts 2.15
                 for (let n = 0; n<values.length;n++){
                     let series = chart.createSeries(ChartView.SeriesTypeLine, n, xAxis, yAxis);
                     series.pointsVisible = true;
-                    series.color = (n === 0) ?"#00ff44" : "#00e5ff"
+                    series.color = (n === 0) ?"	#ff4500" : (n === 1) ?"#54ff9f" : "#00bfff"
                     let pointsCount = 7;
                     let date =new Date(JSON.parse(JSON.stringify(minDate)));
 

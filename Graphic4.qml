@@ -2,20 +2,12 @@ import QtQuick 2.0
 import QtQuick.Extras 1.4
 import QtQuick.Controls.Styles 1.4
 
-
-
 Item {
     id: root
-
 
     anchors.fill: parent
 
     property var value;
-
-
-
-
-
 
     Rectangle{
         id: rectangle1
@@ -24,8 +16,6 @@ Item {
         height:parent.height
         color: "#424242"
         radius: 7
-
-
 
         Rectangle {
             y: parent.height * 0.05
@@ -40,7 +30,6 @@ Item {
                 text: qsTr("Luftdruck")
                 font.pixelSize: rectangle1.width * 0.05
                 font.bold: true
-
             }
         }
 
@@ -51,7 +40,6 @@ Item {
             width: parent.width * 0.02
             height: parent.width*0.02
             color: "#00e5ff"
-
         }
 
         Text {
@@ -62,7 +50,6 @@ Item {
             text: qsTr("Regen")
             font.pixelSize: rectangle1.width * 0.02
             font.bold: false
-
         }
 
         Rectangle {
@@ -72,7 +59,6 @@ Item {
             width: parent.width * 0.02
             height: parent.width*0.02
             color: "#ba03fc"
-
         }
 
         Text {
@@ -83,7 +69,6 @@ Item {
             text: qsTr("Wolkig")
             font.pixelSize: rectangle1.width * 0.02
             font.bold: false
-
         }
 
         Rectangle {
@@ -93,7 +78,6 @@ Item {
             width: parent.width * 0.02
             height: parent.width*0.02
             color: "#fce303"
-
         }
 
         Text {
@@ -104,11 +88,7 @@ Item {
             text: qsTr("Sonnig")
             font.pixelSize: rectangle1.width * 0.02
             font.bold: false
-
         }
-
-
-
 
         Rectangle {
 
@@ -125,7 +105,6 @@ Item {
                 maximumValue: 1050
                 value: root.value
 
-
                 style: CircularGaugeStyle {
                     tickmarkStepSize: 10.0
 
@@ -141,14 +120,12 @@ Item {
                         implicitHeight: outerRadius * 0.9
                         antialiasing: true
 
-
                         color:  root.value < 1000 ? "#00e5ff" : root.value < 1025 ? "#ba03fc" : "#fce303"
                     }
                 }
             }
         }
     }
-
 }
 
 

@@ -3,13 +3,7 @@ import QtQuick 2.0
 Item {
     id: root
 
-
     anchors.fill: parent
-
-
-
-
-
 
         Rectangle{
             id: rectangle1
@@ -18,8 +12,6 @@ Item {
             height:parent.height
             color: "#424242"
             radius: 7
-
-
 
             Rectangle {
                 y: parent.height * 0.05
@@ -34,7 +26,6 @@ Item {
                     text: qsTr("UV-Strahlung")
                     font.pixelSize: rectangle1.width * 0.05
                     font.bold: true
-
                 }
             }
 
@@ -53,8 +44,6 @@ Item {
                     height: parent.height
                     color: "#424242"
 
-
-
                 }
 
                 Rectangle {
@@ -67,7 +56,6 @@ Item {
                 }
             }
         }
-
 }
 
 

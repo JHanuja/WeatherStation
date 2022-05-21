@@ -3,8 +3,6 @@ import QtQuick.Window 2.0
 import QtQuick.Controls 2.0
 import QtCharts 2.15
 
-
-
     ChartView {
 
         property var minDate;
@@ -12,9 +10,7 @@ import QtCharts 2.15
         property var values;
         property var mapFunction;
 
-
         //property var allValues: values[0].concat(values[1]);
-
 
         id: chart
         anchors.fill: parent
@@ -28,11 +24,8 @@ import QtCharts 2.15
                format: "HH:MM"
                tickCount: 7
 
-
             },
             ValueAxis{
-
-
 
                 id: yAxis
                 min: mapFunction(Math.min(...values))
@@ -47,7 +40,6 @@ import QtCharts 2.15
                     let pointsCount = 144;
                     let date =new Date(JSON.parse(JSON.stringify(minDate)));
 
-
                     console.log(minDate);
 
                     var tmpArray = [];
@@ -60,24 +52,13 @@ import QtCharts 2.15
                     for(let i = 0;i < pointsCount;i++)
                     {
 
-
-
                         //console.log(tmpArray[i]);
-
 
                         let y = tmpArray[i];
                         series.append(date, y);
                         console.log(tmpArray[i]);
                         date.setTime(date.getTime()+(5*60*1000));
-
-
                     }
                 }
-
-
-
-
-
-
     }
 
