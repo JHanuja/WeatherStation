@@ -18,6 +18,7 @@ import QtCharts 2.15
         theme: ChartView.ChartThemeDark
         axes: [
             DateTimeAxis {
+                labelsFont: Qt.font({pointSize: 8})
                id: xAxis
                min: minDate;
                max: maxDate;
@@ -26,6 +27,7 @@ import QtCharts 2.15
 
             },
             ValueAxis{
+                labelsFont: Qt.font({pointSize: 8})
 
                 id: yAxis
                 min: mapFunction(Math.min(...values))
