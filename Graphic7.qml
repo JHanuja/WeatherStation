@@ -109,7 +109,7 @@ Item {
                 id: color1
                 width: parent.width * 0.02
                 height: parent.width*0.02
-                color: "#00ff44"
+                color: "#ff0000"
 
             }
 
@@ -130,7 +130,7 @@ Item {
                 id: color2
                 width: parent.width * 0.02
                 height: parent.width*0.02
-                color: "#00e5ff"
+                color: "#0dff00"
 
             }
 
@@ -150,7 +150,7 @@ Item {
                 id: color3
                 width: parent.width * 0.02
                 height: parent.width*0.02
-                color: "#00ff99"
+                color: "#00e1ff"
 
             }
 

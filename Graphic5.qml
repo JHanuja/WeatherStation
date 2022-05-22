@@ -4,6 +4,7 @@ Item {
     id: root
 
     anchors.fill: parent
+    property int ppm;
 
         Rectangle{
             id: rectangle1
@@ -39,8 +40,72 @@ Item {
                 height: parent.height * 0.8 - 30
                 color: "#424242"
 
+                Rectangle {
+                    id: rectangle3
+                    width: parent.width * 0.5
+                    height: parent.height
+                    color: "#424242"
+
+                    Rectangle{
+                        anchors.centerIn: parent
+                        width: parent.width * 0.3
+                        height: parent.height
+                        radius: 10.0
+                        color: "#424242"
+                        border.color: "#ffffff"
+                        border.width: 3.0
+
+                        Rectangle{
+                            width: parent.width * 0.7
+                            height: parent.height * 0.2
+                            radius: 100
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            y: parent.height * 0.1
+                            color: "#ffffff"
+                        }
+
+                        Rectangle{
+                            width: parent.width * 0.7
+                            height: parent.height * 0.2
+                            radius: 100
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            y: parent.height * 0.4
+                            color: "#ffffff"
+                        }
+
+                        Rectangle{
+                            width: parent.width * 0.7
+                            height: parent.height * 0.2
+                            radius: 100
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            y: parent.height * 0.7
+                            color: "#ffffff"
+                        }
+                    }
+
                 }
-            }
+
+                Rectangle {
+                    id: rectangle4
+                    x: parent.width * 0.5
+                    width: parent.width * 0.5
+                    height: parent.height
+                    color: "#424242"
+
+                    Text {
+                        id: text10
+                        text: qsTr(root.ppm +" ppm")
+                        color: "#00ff44"
+                        anchors.verticalCenter: parent.verticalCenter
+                        font.pixelSize: parent.width * 0.15
+                        font.bold: true
+                        anchors.horizontalCenter: parent.horizontalCenter
+                    }
+
+                }
+
         }
 
+ }
+}
 

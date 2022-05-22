@@ -138,7 +138,7 @@ Window {
                                 Graphic8{
                                     mindate: new Date('2022-04-29');
                                     maxdate: new Date('2022-05-05');
-                                    values: [[50,50,55,67,80,56,34],[],[]];
+                                    values: [[],[50,50,55,67,80,56,34],[]];
                                 }
                             }
 
@@ -149,6 +149,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic5{
+                                    ppm: 1000
 
                                 }
                             }
@@ -208,9 +209,9 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic9{
-                                    mindate: new Date('2022-04-29T15:00:00');
-                                    maxdate: new Date('2022-04-29T24:00:00');
-                                    values: [[1200,750,600,500,550,450,500],[],[]];
+                                    mindate: new Date('2022-04-29');
+                                    maxdate: new Date('2022-05-05');
+                                    values: [[],[1200,750,600,500,550,450,500],[]];
                                 }
                             }
 
