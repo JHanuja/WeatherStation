@@ -23,7 +23,7 @@ Item {
                 Text {
                     id: text1
                     color: "#00ff44"
-                    text: qsTr("UV-Strahlung")
+                    text: qsTr("Sonnenzeiten")
                     font.pixelSize: rectangle1.width * 0.05
                     font.bold: true
                 }
@@ -44,6 +44,21 @@ Item {
                     height: parent.height
                     color: "#424242"
 
+                    Rectangle {
+                        id: rectangle31
+                        width: parent.width
+                        height: parent.height * 0.5
+                        color: "#ffffff"
+                    }
+
+                    Rectangle {
+                        id: rectangle32
+                        y: parent.height * 0.5
+                        width: parent.width
+                        height: parent.height * 0.5
+                        color: "#ff0000"
+                    }
+
                 }
 
                 Rectangle {
@@ -53,6 +68,21 @@ Item {
                     height: parent.height
                     color: "#424242"
 
+                    Text{
+                        text: "Sonnenaufgangszeit"
+                        font.pixelSize: 15
+                        color: "#ffffff"
+                        anchors.verticalCenter: parent.verticalCenter
+                        height: parent.height * 0.6
+                    }
+
+                    Text{
+                        text: "Sonnenuntergangszeit"
+                        font.pixelSize: 15
+                        color: "#ffffff"
+                        anchors.verticalCenter: parent.verticalCenter
+                        height: parent.height * -0.4
+                    }
                 }
             }
         }
