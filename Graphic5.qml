@@ -4,7 +4,10 @@ Item {
     id: root
 
     anchors.fill: parent
-    property int ppm;
+    property var ppm;
+
+    property var good: 100;
+    property var bad : 200;
 
         Rectangle{
             id: rectangle1
@@ -61,7 +64,7 @@ Item {
                             radius: 100
                             anchors.horizontalCenter: parent.horizontalCenter
                             y: parent.height * 0.1
-                            color: "#ffffff"
+                            color: ppm <= good ?  "#00ff44": "#ffffff"
                         }
 
                         Rectangle{
@@ -70,7 +73,7 @@ Item {
                             radius: 100
                             anchors.horizontalCenter: parent.horizontalCenter
                             y: parent.height * 0.4
-                            color: "#ffffff"
+                            color: (ppm > good && ppm < bad) ? "#fce803" : "#ffffff"
                         }
 
                         Rectangle{
@@ -79,7 +82,7 @@ Item {
                             radius: 100
                             anchors.horizontalCenter: parent.horizontalCenter
                             y: parent.height * 0.7
-                            color: "#ffffff"
+                            color: ppm >= bad ?  "#fc3903": "#ffffff"
                         }
                     }
 

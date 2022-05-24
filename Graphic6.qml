@@ -5,6 +5,9 @@ Item {
 
     anchors.fill: parent
 
+    property var sunrise;
+    property var sunset;
+
         Rectangle{
             id: rectangle1
             anchors.centerIn: parent
@@ -47,8 +50,16 @@ Item {
                     Rectangle {
                         id: rectangle31
                         width: parent.width
-                        height: parent.height * 0.5
-                        color: "#ffffff"
+                        height: parent.height *0.5
+                        color:  "#424242"
+
+                        Text{
+                            anchors.centerIn: parent
+                            text: "🌞"
+                            font.pixelSize: parent.width * 0.2
+                        }
+
+
                     }
 
                     Rectangle {
@@ -56,7 +67,13 @@ Item {
                         y: parent.height * 0.5
                         width: parent.width
                         height: parent.height * 0.5
-                        color: "#ff0000"
+                        color: "#424242"
+
+                        Text{
+                            anchors.centerIn: parent
+                            text: "🌚"
+                            font.pixelSize: parent.width * 0.2
+                        }
                     }
 
                 }
@@ -69,7 +86,7 @@ Item {
                     color: "#424242"
 
                     Text{
-                        text: "Sonnenaufgangszeit"
+                        text: root.sunrise
                         font.pixelSize: 15
                         color: "#ffffff"
                         anchors.verticalCenter: parent.verticalCenter
@@ -77,7 +94,7 @@ Item {
                     }
 
                     Text{
-                        text: "Sonnenuntergangszeit"
+                        text: root.sunset
                         font.pixelSize: 15
                         color: "#ffffff"
                         anchors.verticalCenter: parent.verticalCenter

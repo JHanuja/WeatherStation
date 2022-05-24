@@ -149,8 +149,7 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic5{
-                                    ppm: 1000
-
+                                    ppm: 150
                                 }
                             }
 
@@ -222,7 +221,8 @@ Window {
                                 Layout.alignment :  Qt.AlignCenter
 
                                 Graphic6{
-
+                                    sunrise: "07:15h"
+                                    sunset: "21:30h"
                                 }
                             }
 
