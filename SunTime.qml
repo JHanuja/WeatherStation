@@ -86,7 +86,7 @@ Item {
                     color: "#424242"
 
                     Text{
-                        text: root.sunrise
+                        text: new Date(root.sunrise).toLocaleTimeString()
                         font.pixelSize: 15
                         color: "#ffffff"
                         anchors.verticalCenter: parent.verticalCenter
@@ -94,7 +94,7 @@ Item {
                     }
 
                     Text{
-                        text: root.sunset
+                        text: new Date(root.sunset).toLocaleTimeString()
                         font.pixelSize: 15
                         color: "#ffffff"
                         anchors.verticalCenter: parent.verticalCenter

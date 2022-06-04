@@ -5,49 +5,7 @@ Item {
 
     anchors.fill: parent
 
-    property var mindate;
-    property var maxdate;
-    property var values;
 
-    function airpressureRange(x){
-        var ap;
-        if (x >= 1150 && x <1200){
-            ap= 1200;
-        }
-        if (x >= 1100 && x < 1150){
-            ap= 1150;
-        }
-        if (x >= 1050 && x < 1100){
-            ap = 1100;
-        }
-        if (x >= 1000 && x < 1050){
-            ap= 1050;
-        }
-        if (x >= 950 && x < 1000){
-            ap = 1000;
-        }
-        if (x >= 900 && x < 850){
-            ap= 950;
-        }
-        if (x >= 850 && x < 900){
-            ap= 900;
-        }
-        if (x >= 800 && x < 850){
-            ap= 850;
-        }
-        if (x >= 750 && x < 800){
-            ap= 800;
-        }
-        if (x >= 700 && x < 750){
-            ap= 750;
-        }
-        if (x >= 650  && x < 700){
-            ap= 700;
-        }
-
-        return ap;
-
-    }
 
     Rectangle{
         id: rectangle1
@@ -103,11 +61,8 @@ Item {
             height: parent.height * 0.8 - 30
             color: "#424242"
 
-            SevenHourChart{
-                mapFunction: airpressureRange
-                minDate: root.mindate
-                maxDate: root.maxdate
-                values: root.values
+            AirpressureHistoryChart{
+
             }
         }
     }

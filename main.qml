@@ -21,19 +21,69 @@ Window {
     onWidthChanged: screenWidth = width
     onHeightChanged: screenHeight = height
 
-    property int degrees;
-    property int humidity;
+
     property var daytime;
+    property var temperature;
+    property var humidity;
+    property var airquality;
+    property var airpressure;
+    property var maxtemp;
+    property var mintemp;
+    property var avgtemp;
+    property var avghum;
+    property var soilhumidity;
+    property var avgsoilhum;
+    property var sunrise;
+    property var sunset;
+    property var airpressurehistory;
+    property var airqualityhistory;
 
     Connections{
         target:wsData
-        function onFetchedData(data){
-            var json = JSON.parse(data);
-            degrees = json["temperature"];
-            humidity = json["humidity"];
-            daytime = json["daytime"];
+        function onFetchedData(){
+            temperature = wsData.temperature;
+            humidity = wsData.humidity;
+            airquality = wsData.airquality;
+            daytime = wsData.daytime;
+            sunrise = wsData.sunrise();
+            sunset = wsData.sunset();
+            soilhumidity = wsData.soilhumidity;
+            airpressure = wsData.airpressure;
+//              console.log(wsData.temperature);
+//              maxtemp =  wsData.getMaxTemp();
 
-            console.log(daytime);
+ //           console.log(wsData);
+
+//            console.log(data["avgtemp"]);
+//            daytime = json["daytime"];
+//            temperature = json["temperature"];
+//            humidity = json["humidity"];
+//            airquality = json["airquality"];
+//            airpressure = json["airpressure"];
+//            maxtemp = json["maxtemp"];
+//            mintemp = json["mintemp"];
+//            avgtemp = json["avgtemp"];
+//            avghum = json["avghum"];
+//            avgsoilhum = json["avgsoilhum"];
+//            sunrise = json["sunrise"];
+//            sunset = json["sunset"];
+//            airpressurehistory = json["airpressurehistory"];
+//            airqualityhistory = json["airqualityhistory"];
+//            console.log(daytime);
+//            console.log(temperature);
+//            console.log(humidity);
+//            console.log(airquality);
+//            console.log(airpressure);
+//            console.log(maxtemp);
+//            console.log(avgtemp);
+//            console.log(avghum);
+//            console.log(avgsoilhum);
+//            console.log(sunrise);
+//            console.log(sunset);
+//            console.log(airpressurehistory);
+//            console.log(airqualityhistory);
+
+
 
         }
     }
@@ -98,9 +148,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic1{
-                                    degrees:mainWindow.degrees
-
+                                Thermometer{
+                                    degrees:mainWindow.temperature
                                 }
                             }
 
@@ -110,10 +159,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic7{
-                                    mindate: new Date('2022-04-29');
-                                    maxdate: new Date('2022-05-05');
-                                    values: [[-4, 0,4,4.5,2,1,3.3],[-10, 2,6,7.0,8.2,9.0,3.0],[-5,3,5,6,5.8,9,-3]];
+                                TemperatureRectangle{
 
                                 }
                             }
@@ -124,7 +170,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight    
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic2{
+                                HumidityCircle{
                                     humidity: mainWindow.humidity
                                 }
                             }
@@ -135,10 +181,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic8{
-                                    mindate: new Date('2022-04-29');
-                                    maxdate: new Date('2022-05-05');
-                                    values: [[],[50,50,55,67,80,56,34],[]];
+                                HumidityRectangle{
+
                                 }
                             }
 
@@ -148,8 +192,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic5{
-                                    ppm: 150
+                                Airquality{
+                                    ppm: mainWindow.airquality
                                 }
                             }
 
@@ -159,10 +203,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic10{
-                                    mindate: new Date('2022-04-29T15:00:00');
-                                    maxdate: new Date('2022-04-29T24:00:00');
-                                    values: [1200,1350,700,800,900,1500,1750];
+                                AirqualitiyHistoryRectangle{
+
                                 }
                             }
 
@@ -172,8 +214,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic4{
-                                    value : 1000
+                                Airpressure{
+                                    value : mainWindow.airpressure
                                 }
                             }
 
@@ -183,11 +225,11 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic11{
-                                    mindate: new Date('2022-04-29T15:00:00');
-                                    maxdate: new Date('2022-04-29T24:00:00');
-                                    values: [1000, 800];
+                                AirpressureHistoryRectangle{
+
                                 }
+
+
                             }
 
                             Rectangle {
@@ -196,8 +238,8 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic3{
-                                    soilHumidity: 20
+                                Soilhumidity{
+                                    soilHumidity: mainWindow.soilhumidity
                                 }
                             }
 
@@ -207,11 +249,12 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic9{
-                                    mindate: new Date('2022-04-29');
-                                    maxdate: new Date('2022-05-05');
-                                    values: [[],[1200,750,600,500,550,450,500],[]];
+
+                                SoilHumidityRectangle{
+
                                 }
+
+
                             }
 
                             Rectangle {
@@ -220,9 +263,9 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic6{
-                                    sunrise: "07:15h"
-                                    sunset: "21:30h"
+                                SunTime{
+                                    sunrise: mainWindow.sunrise
+                                    sunset: mainWindow.sunset
                                 }
                             }
 
@@ -232,7 +275,7 @@ Window {
                                 Layout.preferredHeight: gridlayout.elementHeight
                                 Layout.alignment :  Qt.AlignCenter
 
-                                Graphic12{
+                                Daytime{
                                     daytime:mainWindow.daytime
                                 }
                             }

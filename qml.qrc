@@ -1,20 +1,23 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>Graphic1.qml</file>
-        <file>Graphic2.qml</file>
-        <file>Graphic3.qml</file>
+        <file>Thermometer.qml</file>
+        <file>HumidityCircle.qml</file>
+        <file>Soilhumidity.qml</file>
         <file>ArcItem.qml</file>
-        <file>Graphic4.qml</file>
-        <file>Graphic5.qml</file>
-        <file>Graphic6.qml</file>
-        <file>Graphic7.qml</file>
-        <file>Graphic8.qml</file>
-        <file>Graphic9.qml</file>
-        <file>Graphic10.qml</file>
-        <file>Graphic11.qml</file>
-        <file>Graphic12.qml</file>
-        <file>BasicChart.qml</file>
-        <file>SevenHourChart.qml</file>
+        <file>Airpressure.qml</file>
+        <file>Airquality.qml</file>
+        <file>SunTime.qml</file>
+        <file>TemperatureRectangle.qml</file>
+        <file>HumidityRectangle.qml</file>
+        <file>SoilHumidityRectangle.qml</file>
+        <file>AirqualitiyHistoryRectangle.qml</file>
+        <file>AirpressureHistoryRectangle.qml</file>
+        <file>Daytime.qml</file>
+        <file>TemperatureChart.qml</file>
+        <file>HumidityChart.qml</file>
+        <file>SoilHumidityChart.qml</file>
+        <file>AirqualityHistoryChart.qml</file>
+        <file>AirpressureHistoryChart.qml</file>
     </qresource>
 </RCC>

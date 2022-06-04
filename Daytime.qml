@@ -59,7 +59,7 @@ Item {
                         Text{
                             anchors.centerIn: parent
                             color: '#00ff44'
-                            text: "Stand Daten: " + daytime
+                            text: "Stand Daten: " + new Date(daytime).toLocaleDateString() + " - " + new Date(daytime).toLocaleTimeString()
                         }
                     }
 
